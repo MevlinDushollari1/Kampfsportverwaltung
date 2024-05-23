@@ -16,9 +16,7 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        KaempferRepository repo = new KaempferRepository();
-        List<Kaempfer> mykaempfers = repo.GetAllKaempfer();
-        return View(mykaempfers);
+        return View();
     }
 
     public IActionResult Privacy()
