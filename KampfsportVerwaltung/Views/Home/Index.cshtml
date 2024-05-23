@@ -1,18 +1,47 @@
-﻿@{
+﻿@model List<Kaempfer>
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <h1>Das sind die Kämpfer</h1>
 
-<table>
-    
+<table>     
     <thead>
     <tr>
-        <th></th>
+        <th>ID</th>
+        <th>Vorname</th>
+        <th>Nachname</th>
+        <th>Herkunft</th>
+        <th>Alter</th>
+        <th>Geschlecht</th>
+        <th>Gewicht</th>
     </tr>
-
     </thead>
+    <tbody>
+    @{
+        foreach (var kaempfer in Model)
+        {
+
+            <tr>
+                <td>@(kaempfer.kaempferId)</td>
+                <td>@(kaempfer.vorname)</td>
+                <td>@(kaempfer.nachname)</td>
+                <td>@(kaempfer.herkunft)</td>
+                <td>@(kaempfer.alter)</td>
+                <td>@(kaempfer.geschlecht)</td>
+                <td>@(kaempfer.gewicht)</td>
 
 
-></table>
+            </tr>
+
+        }
+    }    
+</table>
+    
+
+
+
+
+
+
     
