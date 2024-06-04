@@ -19,4 +19,11 @@ public class KaempferController : Controller
         return View();
         
     }
+    [HttpPost]
+    public IActionResult SaveKaempfer(Kaempfer kaempfer)
+    {
+        KaempferRepository repo = new KaempferRepository(); 
+        repo.CreatKaempfer(kaempfer);
+        return Redirect("/Kaempfer");
+    }
 }

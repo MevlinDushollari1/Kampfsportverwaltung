@@ -5,6 +5,8 @@
 
 <h1>Das sind die Kaempfer</h1> 
 
+<a href="/Kaempfer/New" class="btn btn-success">Neuen Kamepfer erstellen</a>
+
 <table>     
     <thead>
     <tr>
@@ -15,6 +17,7 @@
         <th>Alter</th>
         <th>Geschlecht</th>
         <th>Gewicht</th>
+        <th>Aktionen</th>
     </tr>
     </thead>
     <tbody>
@@ -30,6 +33,10 @@
                 <td>@(kaempfer.alter)</td>
                 <td>@(kaempfer.geschlecht)</td>
                 <td>@(kaempfer.gewicht)</td>
+                <td>
+                    <a href="/Kaempfer/Edit?"> Edit</a>
+                    Delete
+                </td>
 
 
             </tr>
